@@ -1,0 +1,30 @@
+version: "3.8"
+networks:
+  piko:
+    name: "piko"
+services:
+  influxdb:
+    image: "influxdb:1.8-alpine"
+    networks: 
+      - piko
+    expose:
+      - "8086"
+    volumes:
+      - $PWD/influxdb:/var/lib/influxdb
+  telegraf:
+    image: "telegraf:1.15-alpine"
+    depends_on: 
+      - influxdb
+    networks: 
+      - piko
+    volumes:
+      - $PWD/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+  grafana:
+    image: "grafana/grafana"
+    depends_on: 
+      - influxdb
+      - telegraf
+    networks: 
+      - piko
+    ports: 
+      - "8080:3000"
