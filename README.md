@@ -69,6 +69,7 @@ which returns a JSON
 | ------------------ | ------------------- | ----- |
 | Total DC input     | 33556736            | W     |
 | Output power       | 67109120            | W     |
+| Self-consumption   | 83888128            | W     |
 | Operating status   | 16780032            | int   |
 
 #### Operating status
@@ -122,3 +123,26 @@ which returns a JSON
 | Phase 1            | 83887106            | W     |
 | Phase 2            | 83887362            | W     |
 | Phase 3            | 83887618            | W     |
+
+### Statistics
+
+#### Day
+
+| Description                | Parameter           | Unit  |
+| -------------------------- | ------------------- | ----- |
+| Yield                      | 251658754           | kWh   |
+| Home-consumption           | 251659010           | kWh   |
+| Self-consumption           | 251659266           | kWh   |
+| Self-consumption rate      | 251659278           | %     |
+| Degree of self-sufficiency | 251659279           | %     |
+
+#### Total
+
+| Description                | Parameter           | Unit  |
+| -------------------------- | ------------------- | ----- |
+| Yield                      | 251658753           | kWh   |
+| Home-consumption           | 251659009           | kWh   |
+| Self-consumption           | 251659265           | kWh   |
+| Self-consumption rate      | 251659280           | %     |
+| Degree of self-sufficiency | 251659281           | %     |
+| Operation time             | 251658496           | %     |
