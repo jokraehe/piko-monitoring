@@ -469,10 +469,10 @@
        }
       ],
       "prefix": "",
-      "suffix": "",
+      "suffix": "kWh",
       "decimalPlaces": {
        "isEnforced": true,
-       "digits": 2
+       "digits": 0
       },
       "note": "",
       "showNoteWhenEmpty": false,
