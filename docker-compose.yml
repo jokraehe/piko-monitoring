@@ -1,11 +1,12 @@
+name: influx
 networks:
-  influx:
-    name: "influx"
+  influx-net:
+    name: "influx-net"
 services:
   influxdb:
     image: "influxdb:alpine"
     networks:
-      - influx
+      - influx-net
     expose:
       - "8086"
     ports:
@@ -26,7 +27,7 @@ services:
     depends_on:
       - influxdb
     networks:
-      - influx
+      - influx-net
     environment:
       - TZ=Europe/Berlin
       - INFLUX_TOKEN=${INFLUX_TOKEN}

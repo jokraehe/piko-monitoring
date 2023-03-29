@@ -4,7 +4,7 @@ This repository contains code to run InfluxDB and Telegraf to collect metrics fr
 
 ## Getting started
 
-To start InfluxDB and Telegraf run ``docker compose up -d``. The UI can then be accessed at ``http://localhost:8086``.
+To start InfluxDB and Telegraf run ``docker-compose up -d``. The UI can then be accessed at ``http://localhost:8086``.
 
 ## Configuration
 
