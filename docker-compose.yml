@@ -20,7 +20,7 @@ services:
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=${INFLUX_TOKEN}
     volumes:
       - $PWD/.influxdb:/var/lib/influxdb2
-      - $PWD/config.yml:/etc/influxdb2/config.yml
+      - $PWD/config.yaml:/etc/influxdb2/config.yaml
   telegraf:
     image: "telegraf:alpine"
     depends_on:
