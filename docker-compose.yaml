@@ -4,6 +4,7 @@ networks:
 services:
   influxdb:
     image: "influxdb:alpine"
+    user: "$(id -u)"
     networks:
       - influx-net
     expose:
@@ -23,6 +24,7 @@ services:
       - $PWD/config.yaml:/etc/influxdb2/config.yaml
   telegraf:
     image: "telegraf:alpine"
+    user: "$(id -u)"
     depends_on:
       - influxdb
     networks:
