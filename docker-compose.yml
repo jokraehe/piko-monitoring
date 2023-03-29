@@ -1,4 +1,3 @@
-name: influx
 networks:
   influx-net:
     name: "influx-net"
